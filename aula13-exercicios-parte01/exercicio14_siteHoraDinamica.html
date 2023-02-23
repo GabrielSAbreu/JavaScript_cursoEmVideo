@@ -7,26 +7,73 @@
     <style>
         body{
             background-color: rgb(77, 77, 235);
+          
         }
         h1{
             color: white;
+            text-align: center;
         }
         section{
             width: 400px;
-            height: 400px;
+            height: 300px;
+            margin: auto;
+            padding: 30px;
             background-color: white;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 10px 10px 10px rgba(34, 32, 32, 0.349);
+        }
+        img{
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+             
+        }
+        footer > p{
+            
+            text-align: center;
+            color: white;
+
         }
     </style>
     <title>Hora agora</title>
 </head>
 <body>
-    <header><h1>Hora Agora</h1></header>
-    <section> <p>Agora são </p>
-        <img src="" alt="">
-    
+    <header>
+        <h1>Hora Agora</h1>
+    </header>
+    <section> <p id="hourText">Agora são </p>
+        <img src="imagens/morning.jpg" alt="" id="image">
+        
     </section>
 
-    <footer>&#169 CGI Recursos Web</footer>
+    <footer><p> &#169 CGI Recursos Web</p></footer>
+
+    <script>
+        let hour = new Date()
+        let hourNow = hour.getHours()
+        let minute = hour.getMinutes()
+    
+        if(hourNow <= 12){
+            document.getElementById('image').src='imagens/morning.jpg'
+            let hourText =document.getElementById('hourText')
+            hourText.innerHTML=`Agora são ${hourNow}:${minute}`
+            
+        }else if(hourNow < 18){
+            document.getElementById('image').src='imagens/afternoon.jpg'
+            document.body.style.backgroundColor = 'rgb(126, 175, 126)'
+            let hourText =document.getElementById('hourText')
+            hourText.innerHTML=`Agora são ${hourNow}:${minute}`
+
+        }else{
+            document.getElementById('image').src='imagens/night.jpg'
+            document.body.style.backgroundColor = 'rgb(205, 146, 205)'
+            let hourText =document.getElementById('hourText')
+            hourText.innerHTML=`Agora são ${hourNow}:${minute}`
+        }
+        
+    </script>
 </body>
 </html>
