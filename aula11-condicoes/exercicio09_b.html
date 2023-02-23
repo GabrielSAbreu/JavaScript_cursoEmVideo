@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="enpt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Estrangeiro ou nativo</h1>
+    <p>Informe o seu país de origem</p>
+    <input type="text" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="resposta"></div>
+
+    <script>
+        function verificar(){
+            let pais = document.getElementById('pais')
+            let res = document.getElementById('resposta')
+         
+           if(pais == 'Brasil' || pais == 'brasil'){
+                res.innerHTML = 'Você é brasileiro'
+            }else{
+                res.innerHTML = 'Você é estrangeiro'
+            }
+        }
+        
+    </script>
+
+    
+</body>
+</html>

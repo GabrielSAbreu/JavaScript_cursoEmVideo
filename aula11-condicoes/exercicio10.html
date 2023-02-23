@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Multas</title>
+    <style>
+        body{
+            font: normal 16pt Arial;
+        }
+        h2{
+            font: normal 14pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Insira a velocidade do veículo</h1>
+
+    <input type="number" name="vel" id="vel">
+    <input type="button" value="verificar" onclick="verificar()">
+    <h2 id="resultado">Resultado da pesquisa</h2>
+
+
+    <script>
+        function verificar(){
+            let txt_velocidade = document.getElementById('vel')
+            let velocidade = Number(txt_velocidade.value)
+            let resultado = document.getElementById ('resultado')
+            /*resultado.innerHTML=`A velocidade informada foi ${velocidade}`*/
+
+            if(velocidade <= 60){
+                resultado.innerHTML=`<p>A velocidade informada foi ${velocidade}Km/h. Continue dirigindo com cautela.</p>`
+            }else{
+                resultado.innerHTML =  `<p>A velocidade informada foi ${velocidade} Km/h. Você foi <strong>MULTADO!!</strong></p>`
+            }
+        }
+           
+           
+    </script>
+</body>
+</html>

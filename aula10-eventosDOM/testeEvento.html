@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #projects{
+            display: flex;
+            justify-content: space-around;
+        }
+        #red{
+            background-color: red;
+            color: white;
+            font: normal 16px Arial;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+        #green{
+            background-color: green;
+            color: white;
+            font: normal 16px Arial;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+
+        }
+        #blue{
+            background-color: blue;
+            color: white;
+            font: normal 16px Arial;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        #about-projects{
+            border: 1px solid;
+            margin-top: 20px;
+        }
+
+    </style>
+    <title>Teste de mudança de texto</title>
+</head>
+<body>
+    
+    <h1>PROJETOS</h1>
+    <section id="projects">
+        <div id="red" onmouseenter="apresentarPilates()" onmouseout="retornarTextoPadrao()">
+            Pilates
+        </div>
+        <div id="green" onmouseenter="apresentarCafeteria()" onmouseout="retornarTextoPadrao()">
+            Cafeteria
+        </div>
+        <div id="blue">
+            Pet
+        </div>
+    </section>
+    <div id="about-projects">
+        Passe o mouse sobre as imagens para saber mais
+        lo
+    </div>
+
+    <script>
+        function apresentarPilates(){
+            let apresenta = document.getElementById('about-projects');
+            apresenta.innerText = 'Este projeto apresenta um estudio de pilates e as diversas modalidades desta prática. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies a tellus vitae gravida. Donec pharetra sem quis libero congue, ac tempor libero dignissim. Fusce turpis enim, hendrerit et est quis, iaculis vestibulum libero. Donec ut nisl id quam ullamcorper imperdiet. In pharetra enim ac magna posuere mattis. Donec et pharetra orci, sed varius purus. Nunc varius arcu at eleifend lobortis. Sed tempus egestas nulla id pharetra. Aliquam rutrum eleifend enim, sed pharetra neque congue eu. Ut et ipsum posuere, pellentesque sem quis, suscipit quam.'
+        }
+        function apresentarCafeteria(){
+            let apresenta = document.getElementById('about-projects');
+            apresenta.innerText = 'Projeto conceitual desenvolvido para uma loja de venda de grãos de café, bem como serviços convencionais de cafeteria'
+        }
+        function retornarTextoPadrao(){
+            let sair = document.getElementById('about-projects');
+            sair.innerText = 'Passe o mouse sobre as imagens para saber mais'
+        }
+
+    </script>
+</body>
+</html>
