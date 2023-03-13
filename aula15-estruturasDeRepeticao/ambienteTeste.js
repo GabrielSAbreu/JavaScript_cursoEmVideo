@@ -1,4 +1,4 @@
-console.log('Tudo bem!')
+/*console.log('Tudo bem!')
 let cont = 1
 while(cont <=10){
     console.log(`Tudo ${cont}`)
@@ -15,4 +15,13 @@ do{
 
 for(let i = 1; i <= 5; i++){
     console.log(`i vale: ${i}`)
-}//Repetição com variável de controle
+}//Repetição com variável de controle*/
+
+let numeros = []
+
+numeros.push(2)
+numeros.push(3)
+
+
+
+console.log(numeros)

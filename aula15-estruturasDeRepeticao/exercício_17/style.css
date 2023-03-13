@@ -19,9 +19,9 @@ div{
     text-align: center;
 }
 
-#display{
-    text-align: left;
-    margin-left: 20px;
+select {
+    width:200px;
+     
 }
 
 
